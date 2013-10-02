@@ -201,9 +201,9 @@ public class JRootApp extends JPanel implements AppView {
         m_Scanner = DeviceScannerFactory.createInstance(m_props);
         
         // Leemos los recursos basicos
-        
-        m_jLblTitle.setText("Xurros Cafe");  
-        m_jLblTitle.setIcon(new ImageIcon("/com/openbravo/images/favicon.png"));
+        BufferedImage imgicon = m_dlSystem.getResourceAsImage("Window.Logo");
+        m_jLblTitle.setIcon(imgicon == null ? null : new ImageIcon(imgicon));
+        m_jLblTitle.setText(m_dlSystem.getResourceAsText("Window.Title"));  
         
         String sWareHouse;
         try {
