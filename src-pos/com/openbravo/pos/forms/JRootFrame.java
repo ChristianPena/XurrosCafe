@@ -66,7 +66,8 @@ public class JRootFrame extends javax.swing.JFrame implements AppMessage {
                 this.setIconImage(ImageIO.read(JRootFrame.class.getResourceAsStream("/com/openbravo/images/favicon.png")));
             } catch (IOException e) {
             }   
-            setTitle(AppLocal.APP_NAME + " - " + AppLocal.APP_VERSION);
+            //setTitle(AppLocal.APP_NAME + " - " + AppLocal.APP_VERSION);
+            setTitle("Gestión de Restaurante Xurros Cafe - 0.2");
             pack();
             setLocationRelativeTo(null);        
             

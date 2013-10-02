@@ -49,6 +49,8 @@ import com.openbravo.pos.scripting.ScriptFactory;
 import com.openbravo.pos.util.StringUtils;
 import java.io.IOException;
 import java.util.regex.Matcher;
+import javax.imageio.ImageIO;
+
 
 /**
  *
@@ -199,9 +201,9 @@ public class JRootApp extends JPanel implements AppView {
         m_Scanner = DeviceScannerFactory.createInstance(m_props);
         
         // Leemos los recursos basicos
-        BufferedImage imgicon = m_dlSystem.getResourceAsImage("Window.Logo");
-        m_jLblTitle.setIcon(imgicon == null ? null : new ImageIcon(imgicon));
-        m_jLblTitle.setText(m_dlSystem.getResourceAsText("Window.Title"));  
+        
+        m_jLblTitle.setText("Xurros Cafe");  
+        m_jLblTitle.setIcon(new ImageIcon("/com/openbravo/images/favicon.png"));
         
         String sWareHouse;
         try {
@@ -610,19 +612,6 @@ public class JRootApp extends JPanel implements AppView {
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/logo.png"))); // NOI18N
-        jLabel1.setText("<html><center>Opentpv is a point of sales application designed for touch screens specializing in the restaurant sector.<br>" +
-            "Copyright \u00A9 2008 Open Sistemas de Información Internet, S.L.<br>" +
-            "Copyright \u00A9 2007-2008 Openbravo, S.L.<br>" +
-            "http://www.opensistemas.com<br>" +
-            "email: imasd@opensistemas.com<br>" +
-            "<br>" +
-            "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.<br>" +
-            "<br>" +
-            "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.<br>" +
-            "<br>" +
-            "You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA<br>" +
-            "</center>"
-        );
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 100, 10, 100));
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
