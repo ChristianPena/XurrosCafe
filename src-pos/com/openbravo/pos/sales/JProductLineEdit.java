@@ -305,25 +305,29 @@ public class JProductLineEdit extends javax.swing.JDialog {
 
         jLabel1.setText(AppLocal.getIntString("label.price")); // NOI18N
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(10, 80, 90, 17);
+        jLabel1.setBounds(10, 80, 90, 16);
 
         jLabel2.setText(AppLocal.getIntString("label.units")); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(10, 50, 90, 17);
+        jLabel2.setBounds(10, 50, 90, 16);
 
         jLabel3.setText(AppLocal.getIntString("label.pricetax")); // NOI18N
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(10, 110, 90, 17);
+        jLabel3.setBounds(10, 110, 90, 16);
 
         jLabel4.setText(AppLocal.getIntString("label.item")); // NOI18N
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(10, 20, 90, 17);
+        jLabel4.setBounds(10, 20, 90, 16);
         jPanel2.add(m_jName);
         m_jName.setBounds(100, 20, 270, 25);
         jPanel2.add(m_jUnits);
         m_jUnits.setBounds(100, 50, 240, 25);
+
+        m_jPrice.setEnabled(false);
         jPanel2.add(m_jPrice);
         m_jPrice.setBounds(100, 80, 240, 25);
+
+        m_jPriceTax.setEnabled(false);
         jPanel2.add(m_jPriceTax);
         m_jPriceTax.setBounds(100, 110, 240, 25);
 
@@ -338,11 +342,11 @@ public class JProductLineEdit extends javax.swing.JDialog {
 
         jLabel5.setText(AppLocal.getIntString("label.tax")); // NOI18N
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(10, 140, 90, 17);
+        jLabel5.setBounds(10, 140, 90, 16);
 
         m_jLblDiscount.setText(AppLocal.getIntString("label.discount")); // NOI18N
         jPanel2.add(m_jLblDiscount);
-        m_jLblDiscount.setBounds(10, 230, 90, 17);
+        m_jLblDiscount.setBounds(10, 230, 90, 16);
 
         m_jTotal.setBackground(javax.swing.UIManager.getDefaults().getColor("TextField.disabledBackground"));
         m_jTotal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -355,7 +359,7 @@ public class JProductLineEdit extends javax.swing.JDialog {
 
         jLabel7.setText(AppLocal.getIntString("label.subtotalcash")); // NOI18N
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(10, 170, 90, 17);
+        jLabel7.setBounds(10, 170, 90, 16);
 
         m_jSubtotal.setBackground(javax.swing.UIManager.getDefaults().getColor("TextField.disabledBackground"));
         m_jSubtotal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -373,7 +377,7 @@ public class JProductLineEdit extends javax.swing.JDialog {
 
         jLabel8.setText(AppLocal.getIntString("label.totalcash")); // NOI18N
         jPanel2.add(jLabel8);
-        jLabel8.setBounds(10, 200, 90, 17);
+        jLabel8.setBounds(10, 200, 90, 16);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
@@ -386,8 +390,8 @@ public class JProductLineEdit extends javax.swing.JDialog {
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.EAST);
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-584)/2, (screenSize.height-390)/2, 584, 390);
+        setSize(new java.awt.Dimension(584, 390));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void m_jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m_jButtonCancelActionPerformed
